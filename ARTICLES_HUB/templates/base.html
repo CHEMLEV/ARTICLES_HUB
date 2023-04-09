@@ -16,7 +16,7 @@
     <h5> Hi, {{user.first_name}} &nbsp <a href="{% url 'logout' %}" >LOG OUT</a></h5>
     
     {% else %}
-    <h5>You're not logged in &nbsp <a href= >LOGIN</a> &nbsp <a href=>SIGNUP</a></h5>
+    <h5>You're not logged in &nbsp <a href="{% url 'login' %}"  >LOGIN</a> &nbsp <a href="{% url 'register' %}">SIGNUP</a></h5>
     {% endif %}
      
 
@@ -24,13 +24,17 @@
         <p1><img src="{% static 'images/articles_hub_logo2.jpg' %}" alt="logo-image" height="60" ></p1>
         <div>
             
-            <a href= class="button-base">HOME</a>
+            <a href="{% url 'home' %}" class="button-base">HOME</a>
             <a href= class="button-base">ARTICLES</a>
             <a href= class="button-base">ABOUT</a>           
 
         </div>
     </header>
-
+{% if messages %}
+    {%for message in messages %}
+    <div>{{ message }}</div>
+    {% endfor %}
+{% endif %}
 {% block content %} {% endblock content %}
 
 </body>
