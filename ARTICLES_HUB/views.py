@@ -1,7 +1,21 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import NewUserForm
 
 # Create your views here.
 
 def HomePageView(request):
     return render (request, 'home.html') 
+
+def register(request):
+        if request.method == "POST":
+            form = NewUserForm(request.POST)
+            if form.is_valid():
+                 form.save()
+                 username = form.cleaned_data.get('username')
+                 messages.success(request, f"Your account has been created! You are now able to log in" )
+                 return redirect('login')
+        else:
+            form = NewUserForm()
+
+        return render(request,'register.html',{'form':form})
