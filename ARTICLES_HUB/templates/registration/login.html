@@ -1,8 +1,18 @@
-{% extends "base.html" %}
 
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
 
 <center style="margin-top: 100px"> <img src="{% static 'images/articles_hub_logo2.jpg' %}" alt="logo-image" height="120" ><br><br><center>
 
@@ -15,6 +25,8 @@
 
 
 <p class="text-center">Don't have an account? Create one <a href="{% url 'register' %}">here</a></p> </center>
+
+</html>
 
 
 
