@@ -13,7 +13,7 @@ class ArticleFilter(django_filters.FilterSet):
     category_id = django_filters.ModelChoiceFilter(
         queryset=ArticleCategory.objects.all(),
         empty_label="All Categories",
-        label="Categories",
+        label="Category",
         widget=forms.Select(attrs={'class': 'filter_field'}),
         )
 

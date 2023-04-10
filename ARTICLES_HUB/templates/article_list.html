@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <h1>ARTICLES </h1>
 
 <form style="width: 340px" method="POST">
@@ -38,7 +40,7 @@
 
 </center>
 
-
+{% endif %} 
 
 {% endblock content %}
     

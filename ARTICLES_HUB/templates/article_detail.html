@@ -3,6 +3,9 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+
+{% if user.is_authenticated %}
+
   <div class="tour-entry">
 
     <h1>{{ article.article_name }} </h1>
@@ -10,7 +13,7 @@
       <br><br>   
        Category: {{ article.category_id }}
        <br><br>
-       Article about: {{article.article_about}}
+       {{article.article_about}}
        <br> <br>
        {% if article.year_of_born != null %}
        Born: {{article.year_of_born}}
@@ -33,7 +36,7 @@
        <br>
        {% endif %}
        {% if article.article_year != null %}  
-       Article year: {{article.article_year}}
+       Year: {{article.article_year}}
        <br> 
        {% endif %}
        {% if article.medium != null %}  
@@ -69,5 +72,7 @@
   
 
   </center>
+
+{% endif %}
 
 {% endblock content %}

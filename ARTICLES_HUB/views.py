@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from .forms import NewUserForm
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, FormView
@@ -8,14 +7,13 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
 from .filters import ArticleFilter
 from . import views
+from django.contrib.auth import logout
+from django.shortcuts import redirect
 
-# Create your views here.
 
 def HomePageView(request):
     return render (request, 'home.html') 
 
-def AboutPageView(request):
-    return render (request, 'about.html') 
 
 def register(request):
         if request.method == "POST":
@@ -23,7 +21,6 @@ def register(request):
             if form.is_valid():
                  form.save()
                  username = form.cleaned_data.get('username')
-                 messages.success(request, f"Your account has been created! You are now able to log in" )
                  return redirect('login')
         else:
             form = NewUserForm()
@@ -31,11 +28,8 @@ def register(request):
         return render(request,'register.html',{'form':form})
 
 
-# Filter
 def article_filter_list(request):
-    # articleFilter = ArticleFilter(request.GET, queryset=Article.objects.all())
-    # return render(request, 'article_list.html', {'articleFilter': articleFilter})
-
+    
     articles = Article.objects.all()
 
     articleFilter = ArticleFilter(queryset=articles)
