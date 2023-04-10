@@ -33,10 +33,11 @@ body{
     border: 2px solid #663300;
     min-width: 270px;
     font-size: 22px;
+    margin-left: 50px;
+    margin-right: 50px;
     display: inline-block;
     text-align: center;
     padding: 10px 20px;
-    margin-left: 10px;
     background-color: white;
     cursor: pointer;
     font-weight: bold;
@@ -66,19 +67,19 @@ body{
     } 
 
   button[type=submit] {
-    border: 2px solid  #663300 !important;
+    border: 3px solid  #663300 !important;
     width: 130px !important;
     height: 40px !important;
+    font-size: 18px;
     line-height: 40px !important;
-    display: inline-block !important;
-    text-align: center;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-right: 100px;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: white;
     color: #663300 !important;
     cursor: pointer;
-    border-radius: 5px;    
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button[type=submit]:hover{
@@ -111,10 +112,18 @@ button[type=submit]:hover{
   
 a{
     color: #663300;
+    font-weight: bold;
     text-decoration: none;
     margin-left: 0px;
     margin-top: 0px;
   }
+
+a:hover {    
+    text-decoration: underline;    
+  }
+
+
+
 
   .button-light:hover, .button-add:hover, .button-base:hover {
     background-color: #663300;
@@ -202,5 +211,15 @@ a{
   .home-page{
     display: flex;
   }
+
+  .submit-button{
+     font-weight: bold;
+     height: 40px; 
+     line-height: 40px;
+  }
  
+  .base-button-container {
+    margin: 0 auto;
+    text-align: center;
+}
   
