@@ -69,14 +69,14 @@ class ArticleDetailsView(DetailView):
 class ArticleCreateView(LoginRequiredMixin, CreateView):  # new 
     model = Article
     template_name = "article_new.html"
-    fields = ("type_id", "category_id", "article_name", "dateofborn", "dateofdied", "nationality", "notable_work", "article_about", "known_for", "article_year", "medium", "location", "designed", "developer")
+    fields = ("type_id", "category_id", "article_name", "year_of_born", "year_of_died", "nationality", "notable_work", "article_about", "known_for", "article_year", "medium", "dimensions", "location", "designed", "developer")
     success_url = reverse_lazy('article_list')
 
 
 class ArticleUpdateView(UpdateView): #LoginRequiredMixin, UserPassesTestMixin, 
     model = Article
     fields = (
-        "type_id", "category_id", "article_name", "dateofborn", "dateofdied", "nationality", "notable_work", "article_about", "known_for", "article_year", "medium", "location", "designed", "developer"
+        "type_id", "category_id", "article_name", "year_of_born", "year_of_died", "nationality", "notable_work", "article_about", "known_for", "article_year", "medium", "dimensions", "location", "designed", "developer"
     )
     template_name = "article_edit.html"
     success_url = reverse_lazy('article_list')
