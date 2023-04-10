@@ -1,6 +1,5 @@
 
 {% load static %}
-{% load crispy_forms_tags %}
 {% block content %}
 
 
@@ -16,7 +15,7 @@
 
 <center style="margin-top: 100px"> <img src="{% static 'images/articles_hub_logo2.jpg' %}" alt="logo-image" height="120" ><br><br><center>
 
-<form style="margin-top: 20px" action="" method="post">
+<form style="margin-top: 20px; width: 500px;" action="" method="post">
 {% csrf_token %}
 {{form.as_p}}
 

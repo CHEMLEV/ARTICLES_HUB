@@ -4,7 +4,6 @@ from .views import ArticlesListView, ArticleDetailsView, ArticleCreateView, Arti
 
 urlpatterns = [
     path('home.html/', views.HomePageView, name = "home"),
-    path("about/", views.AboutPageView, name = "about"),
     path("articles/", ArticlesListView.as_view(), name = "article_list"),
     path("article/<int:pk>/", ArticleDetailsView.as_view(), name = "article_detail"),
     path("article/new/", ArticleCreateView.as_view(), name = "article_new"),

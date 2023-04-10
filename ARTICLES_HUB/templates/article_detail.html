@@ -5,22 +5,29 @@
 {% block content %}
   <div class="tour-entry">
 
-    <h1>Listing</h1>
-    <h2>Article name: {{ article.article_name }} </h2>
-    <h4>Type: {{ article.type_id }}
-      <br>   
+    <h1>{{ article.article_name }} </h1>
+    <h4>Type: {{article.type_id }}
+      <br><br>   
        Category: {{ article.category_id }}
-       <br> 
-       Date of born: {{article.dateofborn}}
-       <br> 
-       Date of died: {{article.dateofdied}}
-       <br> 
-       Nationality: {{article.nationality}}
-       <br> 
-       Notable work: {{article.notable_work}}
-       <br> 
+       <br><br>
        Article about: {{article.article_about}}
-       <br> 
+       <br> <br>
+       {% if article.dateofborn != null %}
+       Date of born: {{article.dateofborn}}
+       <br>
+       {% endif %}
+       {% if article.dateofdied != null %}
+       Date of died: {{article.dateofdied}}
+       <br>
+       {% endif %}
+       {% if article.nationality is not empty %}
+       Nationality: {{article.nationality}}
+       <br>
+       {% endif %}
+       {% if article.notable_work != null %}
+       Notable work: {{article.notable_work}}
+       <br>
+       {% endif %}       
        Known for: {{article.known_for}}
        <br> 
        Article year: {{article.article_year}}
@@ -38,13 +45,13 @@
   <div>
     {% if 'contenttypes.change_contenttype' in perms %}
 
-    <a href="{% url 'article_edit' article.pk %}" class="button-light">Edit</a>
+    <a href="{% url 'article_edit' article.pk %}" class="button-dark">EDIT</a>
 
     {% endif %}
 
     {% if 'contenttypes.delete_contenttype' in perms %}
 
-    <a href="{% url 'article_delete' article.pk %}" class="button-light">Delete</a><br><br>
+    <a href="{% url 'article_delete' article.pk %}" class="button-dark">DELETE</a><br><br>
 
     {% endif %}  
   

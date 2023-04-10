@@ -106,8 +106,11 @@ button[type=submit]:hover{
     background-color: #663300;
     color: white !important;
     padding: 10px 20px;
-    margin-top: 20px;  
+    margin-top: 20px;
+    display: block;
+    width: 100%; 
     font-weight: bold;
+    text-align: center;
   }
   
 a{
@@ -116,6 +119,7 @@ a{
     text-decoration: none;
     margin-left: 0px;
     margin-top: 0px;
+    width: 200px;
   }
 
 a:hover {    
