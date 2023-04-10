@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="listings">
+    <h1>Articles </h1>
+
+    <a href="{% url 'article_new' %}" class="button-add">Add new</a>
+
+</div>
+
+
+<form method='POST'>
+    {% csrf_token %}
+
+    {{ articleFilter.form.as_p }}
+    
+    <input type="submit" class="button-search" value="search" />
+
+</form>
+
+<br />
+
+
+{% for article in articleFilter.qs %}
+
+<div class="tour-entry">
+    <h2><a href=" {% url 'article_detail' article.pk %} " >{{article.article_name}}</a></h2>
+    <p>Article: {{article.article_about}}</p>
+    
+</div>
+
+
+
+{% endfor %}
+
+
+
+{% endblock content %}
+    

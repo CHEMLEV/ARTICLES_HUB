@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="tour-entry">
+
+    <h1>Listing</h1>
+    <h2>Article name: {{ article.article_name }} </h2>
+    <h4>Type: {{ article.type_id }}
+      <br>   
+       Category: {{ article.category_id }}
+       <br> 
+       Date of born: {{article.dateofborn}}
+       <br> 
+       Date of died: {{article.dateofdied}}
+       <br> 
+       Nationality: {{article.nationality}}
+       <br> 
+       Notable work: {{article.notable_work}}
+       <br> 
+       Article about: {{article.article_about}}
+       <br> 
+       Known for: {{article.known_for}}
+       <br> 
+       Article year: {{article.article_year}}
+       <br> 
+       Medium: {{article.medium}}
+       <br> 
+       Location: {{article.location}}
+       <br> 
+       Designed: {{article.designed}}
+       <br> 
+       Developer: {{article.developer}}
+
+  </div>
+
+  <div>
+ 
+    <a href="{% url 'article_edit' article.pk %}" class="button-light">Edit</a>
+  
+    <a href="{% url 'article_delete' article.pk %}" class="button-light">Delete</a><br><br>
+  
+
+  </div>
+
+{% endblock content %}
