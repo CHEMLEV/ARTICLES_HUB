@@ -36,10 +36,17 @@
   </div>
 
   <div>
- 
+    {% if 'contenttypes.change_contenttype' in perms %}
+
     <a href="{% url 'article_edit' article.pk %}" class="button-light">Edit</a>
-  
+
+    {% endif %}
+
+    {% if 'contenttypes.delete_contenttype' in perms %}
+
     <a href="{% url 'article_delete' article.pk %}" class="button-light">Delete</a><br><br>
+
+    {% endif %}  
   
 
   </div>
