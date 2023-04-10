@@ -2,9 +2,22 @@
 {% load static %}
 {% block content %}
 
-    <center><img src="{% static 'images/books.jpg' %}" alt="home-image" max-width="100%" height="320" ></center><br><br>
-    <p>
+<center>
+
+<header>
     
+    <div class = "base-button-container">
+        
+        <a href="{% url 'home' %}" class="button-base">HOME</a>
+        <a href="{% url 'article_list' %}" class="button-base">ARTICLES</a>
+        <a href="{% url 'about' %}" class="button-base">ABOUT</a>           
+
+    </div>
+</header>
+
+    <img src="{% static 'images/books.jpg' %}" alt="home-image" max-width="100%" height="320" >
+    
+</center><br><br>    
     Welcome to Articles Hub. We exist to make access to quality educational articles easier for everyone.<br><br>
 
     Feel free to create an account and start searching for articles you need! You can also manage articles and help others if you have relevant level of access.<br><br>
