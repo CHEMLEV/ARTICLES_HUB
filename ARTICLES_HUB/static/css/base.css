@@ -108,9 +108,10 @@ button[type=submit]:hover{
     padding: 10px 20px;
     margin-top: 20px;
     display: block;
-    width: 100%; 
+    width: 80%; 
     font-weight: bold;
     text-align: center;
+    border-radius: 5px;   
   }
   
 a{
@@ -129,11 +130,12 @@ a:hover {
 
 
 
-  .button-light:hover, .button-add:hover, .button-base:hover {
+  .button-light:hover, .button-dark:hover {
     background-color: #663300;
     color: white !important;
-    font-weight: bold;
-  }
+    text-decoration: underline;
+    cursor:pointer;
+    }
 
   .button-dark:hover{
     font-weight: bold;

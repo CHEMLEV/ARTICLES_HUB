@@ -12,37 +12,49 @@
        <br><br>
        Article about: {{article.article_about}}
        <br> <br>
-       {% if article.dateofborn != null %}
-       Date of born: {{article.dateofborn}}
+       {% if article.year_of_born != null %}
+       Born: {{article.year_of_born}}
        <br>
        {% endif %}
-       {% if article.dateofdied != null %}
-       Date of died: {{article.dateofdied}}
+       {% if article.year_of_died != null %}
+       Died: {{article.year_of_died}}
        <br>
        {% endif %}
-       {% if article.nationality is not empty %}
+       {% if article.nationality != null %}
        Nationality: {{article.nationality}}
        <br>
        {% endif %}
        {% if article.notable_work != null %}
        Notable work: {{article.notable_work}}
        <br>
-       {% endif %}       
+       {% endif %}
+       {% if article.known_for != null %}  
        Known for: {{article.known_for}}
-       <br> 
+       <br>
+       {% endif %}
+       {% if article.article_year != null %}  
        Article year: {{article.article_year}}
        <br> 
+       {% endif %}
+       {% if article.medium != null %}  
        Medium: {{article.medium}}
        <br> 
+       {% endif %}
+       {% if article.location != null %}  
        Location: {{article.location}}
        <br> 
+       {% endif %}
+       {% if article.designed != null %}
        Designed: {{article.designed}}
        <br> 
+       {% endif %}
+       {% if article.developer != null %}
        Developer: {{article.developer}}
+       {% endif %}
 
   </div>
 
-  <div>
+  <center>
     {% if 'contenttypes.change_contenttype' in perms %}
 
     <a href="{% url 'article_edit' article.pk %}" class="button-dark">EDIT</a>
@@ -56,6 +68,6 @@
     {% endif %}  
   
 
-  </div>
+  </center>
 
 {% endblock content %}

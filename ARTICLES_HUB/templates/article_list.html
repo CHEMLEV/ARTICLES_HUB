@@ -2,24 +2,14 @@
 
 {% block content %}
 
-<div class="listings">
-    <h1>Articles </h1>
+<h1>ARTICLES </h1>
 
-    {% if 'contenttypes.add_contenttype' in perms %}
-
-    <a href="{% url 'article_new' %}" class="button-add">Add new</a>
-
-    {% endif %}    
-
-</div>
-
-
-<form method='POST'>
+<form style="width: 340px" method="POST">
     {% csrf_token %}
 
     {{ articleFilter.form.as_p }}
     
-    <input type="submit" class="button-search" value="Search" />
+    <input type="submit" class="button-dark" style="width: 340px" value="SEARCH" />
 
 </form>
 
@@ -34,9 +24,19 @@
     
 </div>
 
-
-
 {% endfor %}
+
+
+<center>
+    
+
+    {% if 'contenttypes.add_contenttype' in perms %}
+
+    <a href="{% url 'article_new' %}" class="button-dark">ADD NEW</a>
+
+    {% endif %}    
+
+</center>
 
 
 
