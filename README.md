@@ -1,5 +1,5 @@
 # Project Description
-A shopping cart api designed in Python. The aim of this repo was to create a database wrapper using plain SQL and named tuples. Design patterns implemented include the singleton design pattern. Abstract Base Classes are used to create the DB interface. (SOLID principles.)
+
 
 ## How to set up.
 - Create a postgres database.
