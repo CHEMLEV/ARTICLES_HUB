@@ -1,12 +1,12 @@
 body{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     text-decoration: none;
     margin: 20px 80px 20px 80px;
   }
 
   title{
-    color: #663300;
+    color: #151979;
   }
   
   header{
@@ -17,12 +17,12 @@ body{
     text-decoration: none;
     align-items: flex-end;
     justify-content: space-between;
-    color: #663300;
+    color: #151979;
     font-weight: bold;
   }
   
   p1{
-    color: #663300;
+    color: #151979;
     text-decoration: none;
     font-size: 30px;
     font-weight: bold;
@@ -30,7 +30,7 @@ body{
   }
 
   .button-base{
-    border: 2px solid #663300;
+    border: 2px solid #151979;
     min-width: 270px;
     font-size: 22px;
     margin-left: 50px;
@@ -44,7 +44,7 @@ body{
   }
 
   .button-light{
-    border: 2px solid #663300 !important;
+    border: 2px solid #151979 !important;
     width: 100px !important;
     height: 15px !important;
     line-height: 15px !important;
@@ -54,27 +54,27 @@ body{
     margin-top: 10px;
     margin-right: 10px;
     background-color: white;
-    color: #663300 !important;
+    color: #151979 !important;
     cursor: pointer;
     border-radius: 5px;
   }
 
   form{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     
     width: 20%;
     } 
 
   button[type=submit] {
-    border: 3px solid  #663300 !important;
+    border: 3px solid  #151979 !important;
     width: 130px !important;
     height: 40px !important;
     font-size: 18px;
     line-height: 40px !important;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: white;
-    color: #663300 !important;
+    color: #151979 !important;
     cursor: pointer;
     border-radius: 5px;
     display: flex;
@@ -83,13 +83,13 @@ body{
 }
 
 button[type=submit]:hover{
-  background-color: #663300 !important;
+  background-color: #151979 !important;
   color: white !important;
   font-weight: bold;
 }
 
   .button-add{
-    border: 2px solid #663300 !important;
+    border: 2px solid #151979 !important;
     min-width: 70px !important;
     display: inline-block;
     text-align: center;
@@ -99,23 +99,25 @@ button[type=submit]:hover{
     background-color: white;
     color: #02A7C1 !important;
     cursor: pointer;
-    border-radius: 5px;   
+    border-radius: 2px;
   }
 
   .button-dark{
-    background-color: #663300;
+    background-color: #151979;
     color: white !important;
     padding: 10px 20px;
     margin-top: 20px;
     display: block;
-    width: 80%; 
+    /*width: 80%; */
     font-weight: bold;
     text-align: center;
-    border-radius: 5px;   
+    border-radius: 5px;
+    border: none !important;
+    letter-spacing: 2px;
   }
   
 a{
-    color: #663300;
+    color: #151979;
     font-weight: bold;
     text-decoration: none;
     margin-left: 0px;
@@ -124,14 +126,14 @@ a{
   }
 
 a:hover {    
-    text-decoration: underline;    
+    text-decoration: underline;
   }
 
 
 
 
   .button-light:hover, .button-dark:hover {
-    background-color: #663300;
+    background-color: #151979;
     color: white !important;
     text-decoration: underline;
     cursor:pointer;
@@ -144,7 +146,7 @@ a:hover {
   
 
   .tour-entry h2{
-    color: #663300;
+    color: #151979;
     text-decoration: none;
   }
 
@@ -159,7 +161,7 @@ a:hover {
   h5{
     text-align: right;
     text-decoration: none;
-    color: #663300;
+    color: #151979;
     font-size: 15px;
     font-weight: bold;
     margin: 0px;
@@ -193,12 +195,12 @@ a:hover {
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    color: #663300;
+    color: #151979;
   }
 
   h1{
     font-weight: bold;
-    color: #663300;
+    color: #151979;
   } 
 
   .no-margin, button{
