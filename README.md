@@ -4,7 +4,7 @@
 
 ## How to set up.
 - Clone the repo.
-- Ensure you are on the dev branch.
+- Ensure you are on the main branch.
 - Install the command "pip install -r requirements.text"
 
 
