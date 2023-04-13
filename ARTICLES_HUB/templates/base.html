@@ -14,11 +14,18 @@
 <body>
     {% if user.is_authenticated %}
 
-    <h5 style="margin-left: 1200px; text-align: left">
-        Hi, {{user.first_name}} <br>
-         Your access level: {{user.groups.first.name}} <br>
-         <a href="{% url 'logout' %}">LOG OUT</a>
-    </h5>
+    <div class="base-container">
+        <div class="base-logo">
+          <a href="{% url 'home' %}"><img src="{% static 'images/articles_hub_logo2.jpg' %}" height="80px"></a>
+        </div>
+        <div class="base-text">
+            <h5>
+                Hi, {{user.first_name}} <br>
+                 Your access level: {{user.groups.first.name}} <br>
+                 <a href="{% url 'logout' %}">LOG OUT</a>
+            </h5>
+        </div>
+      </div>    
 
     {% endif %} 
     

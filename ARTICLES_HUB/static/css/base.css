@@ -15,10 +15,14 @@ body{
     padding-bottom: 20px;
     display: flex;
     text-decoration: none;
-    align-items: flex-end;
+    align-items: center;
+    text-align: center;
     justify-content: space-between;
     color: #151979;
     font-weight: bold;
+    font-size: 30px;
+    border: orange 3px;
+
   }
   
   p1{
@@ -229,5 +233,21 @@ a:hover {
   .base-button-container {
     margin: 0 auto;
     text-align: center;
+}
+
+.base-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.base-logo {
+  flex-basis: 50%;
+}
+
+.base-text {
+  text-align: left;
+  margin-left: auto;
+  flex-basis: 50%;
 }
   
