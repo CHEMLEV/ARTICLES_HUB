@@ -26,6 +26,10 @@
         This is a project created by Alexey, Mei, Keita, Rosalind and Tracy from Whitecliffe NZ for
         educational purposes only.
     </p>
+{% else %} 
+<body>
+    <a href="{% url 'login' %}">Go to Login page</a>
+</body>  
 
 {% endif %}
 
